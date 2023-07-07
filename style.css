@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&display=swap');
+body{
+    background-color: black;
+    color:azure;
+    font-family: 'Cormorant', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    background-color:#0e0e0e;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.25em; 
+  }
+  .rounded-circle
+{
+  border-radius: 50%;
+}
+  .logo-image{
+    width: 44px;
+    height: 44px;
+    border-radius: 60%;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #979797;
+    color: black;
+  }
+  .topnav a:first-child:hover {
+    background-color: #0e0e0e;
+  }
+  
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #46453d;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: fixed;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    font-size: 2em;
+}
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: absolute;
+  color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+    margin-bottom: 7%;
+}
+ 
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.logo p{
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 1200px){
+  .visit h2{
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 930px){
+  .visit h2{
+    font-size: 1em;
+  }
+  .logo p{
+    font-size: 0.5em;
+  }
+}
+
+
+@media(prefers-reduced-motion){
+    .hidden {
+        transition: none;
+    }
+}
+
+.logos {
+    display: flex;
+    margin-left: 2%;
+}
+.hidden img{
+  border-radius: 5px;
+  width: 80%;
+}
+.logo:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 500ms;
+}
+
+.menu a{
+  color:#f1f1f1;
+  text-decoration: none;
+  width: 100%;
+  border:rgba(255, 255, 255, 0.3) solid 2px;
+  background-color:rgba(93, 93, 93, 0.2);
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.visit {
+  min-height: fit-content;
+  margin: 0 auto;
+  padding-left: 5%;
+  font-size: 2em;
+  height: 100vh;
+}
+.visit h2{
+  padding-left: 3%;
+  padding-right: 5%;
+  margin-top: 5%;
+}
+
+footer {
+  font-size: 20px;
+  color:#74736f;
+  float: right;
+  bottom:0;
+  margin-right: 3%;
+}
+
+.coffee{
+  width: 45%;
+  float: left;
+  margin-left: 5%;
+  border-top-left-radius: 10px;     /* Rounded top-left corner */
+  border-top-right-radius: 0px;    /* Rounded top-right corner */
+  border-bottom-right-radius: 0px;    /* Straight bottom-right corner */
+  border-bottom-left-radius: 10px;  /* Rounded bottom-left corner */
+}
+
+.content1 h1{
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.content1{
+  position: absolute;
+  color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin-top: 15%;
+  font-size: 30px;
+}
+
+.desserts{
+  width: 45%;
+  float: left;
+  border-top-left-radius: 0;     /* Rounded top-left corner */
+  border-top-right-radius: 10px;    /* Rounded top-right corner */
+  border-bottom-right-radius: 10px;    /* Straight bottom-right corner */
+  border-bottom-left-radius: 0px;  /* Rounded bottom-left corner */
+}
+
+.coffee, .desserts{
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+th:nth-child(2), th:nth-child(3){
+  background-color: rgba(126, 118, 118, 0.4);
+  border-radius: 50px;
+  padding: 20px;
+}
+td:nth-child(2), td:nth-child(3){
+  background-color: rgba(134, 102, 102, 0.2);
+  border-radius: 10px;
+}
+td:first-child{
+  width: 4em;
+}
+
+@media screen and (max-width: 1000px){
+  .content1{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+  }
+  .coffee{
+    order: 1;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .desserts{
+    order: 2;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 7%;
+  }
+  
+
+}
+
+.about h1{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #000000;
+}
+
+.about p{
+  position: relative;
+  font-size: 1.4rem;
+  margin-right: 40px;
+  margin-left: 40px;
+  float: left;
+  width: 60%;
+  display: inline-block;
+  max-height: 100vh;
+}
+
+.textBG{
+  position: relative;
+  float: left;
+  background-color: rgba(93, 93, 93, 0.1);
+  min-height: 76.3vh;
+  display: inline-block;
+  bottom: 0;
+}
+.BG{
+  float: left;
+  background-color: rgba(93, 93, 93, 0.1);
+  min-height: 100vh;
+  display: inline-block;
+}
+.aboutIMG{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 76.1vh;
+  width: auto;
+  display: inline-block;
+  padding-top: 5px;
+}
+.aboutIMG img{
+  float: right;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px){
+  .aboutIMG{
+    display: none;
+  }
+  .about p{
+    position: relative;
+    font-size: x-large;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 90%;
+    display: inline-block;
+  }
+
+}
+.contact h1{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 5%;
+  text-align: center;
+  background-color: #000000;
+}
+.contact h2{
+  font-size: 1.2em;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 0.7em;
+}
+.contact p, a{
+  font-size: 0.7em;
+}
+.contact p:last-child{
+  padding-bottom: 0.2em;
+}
+.contact{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.boxes{
+  margin-top: 2em;
+}
+.location{
+  float: left;
+  width: 22%;
+  background-color: rgba(93, 93, 93, 0.2);
+  border-radius: 5px;
+  border: 3px solid rgb(255, 255, 255);
+  margin-left: 1em;
+  height: 300px;
+  overflow: hidden;
+}
+.details{
+  float: left;
+  width: 22%;
+  background-color: rgba(93, 93, 93, 0.2);
+  border-radius: 5px;
+  border: 3px solid rgb(255, 255, 255);
+  margin-left: 1em;
+  height: 300px;
+  overflow: hidden;
+}
+.hours{
+  float: left;
+  width: 22%;
+  background-color: rgba(93, 93, 93, 0.2);
+  border-radius: 5px;
+  border: 3px solid rgb(255, 255, 255);
+  margin-left: 1em;
+  height: 300px;
+  overflow: hidden;
+}
+.social{
+  float: left;
+  width: 22%;
+  background-color: rgba(93, 93, 93, 0.2);
+  border-radius: 5px;
+  border: 3px solid rgb(255, 255, 255);
+  margin-left: 1em;
+  margin-right: 1em;
+  height: 300px;
+  overflow: hidden;
+}
+.social a{
+  text-decoration: none;
+  color: white;
+
+}
+
+@media screen and (max-width: 1510px){
+  .location, .details, .hours, .social{
+    width: 40%;
+    margin: 4%;
+    font-size: 1.2em;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 850px){
+  .location, .details, .hours, .social{
+    width: 40%;
+    font-size: 1em;
+    height: 300px;
+    align-items: center;
+  }
+  .contact h2{
+    font-size: 1em;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 850px){
+  .location, .details, .hours, .social{
+    width: 40%;
+    font-size: 1em;
+    height: 250px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 650px){
+  .location, .details, .hours, .social{
+    width: 80%;
+    font-size: 1em;
+    height: 250px;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;;
+  }
